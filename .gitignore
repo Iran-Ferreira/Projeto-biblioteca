@@ -1,0 +1,25 @@
+# Comentários começam com #
+
+# Arquivos compilados do Java
+*.class
+
+# Pacotes
+*.jar
+*.war
+*.ear
+
+out/
+
+# Arquivos de log
+*.log
+
+# Pastas de IDEs
+.idea/
+.settings/
+*.iml/
+src.iml
+# Arquivos do VS Code
+.vscode/
+
+# Arquivos do NetBeans
+nbproject/
