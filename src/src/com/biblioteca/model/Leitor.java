@@ -1,0 +1,9 @@
+package com.biblioteca.model;
+
+public final class Leitor extends Usuario {
+
+    public Leitor(String nome) {
+        super(nome);
+        // No futuro, poderia ter atributos específicos como "limiteDeEmprestimos"
+    }
+}
