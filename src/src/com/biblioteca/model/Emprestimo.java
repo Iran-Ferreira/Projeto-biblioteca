@@ -6,7 +6,7 @@ import java.util.UUID;
 
 /**
  * Representa um empréstimo ATIVO.
- * Usamos um Record para imutabilidade e simplicidade.
+ * Usei um Record para imutabilidade e simplicidade.
  */
 public record Emprestimo(
         UUID id,
@@ -15,10 +15,6 @@ public record Emprestimo(
         LocalDate dataEmprestimo,
         LocalDate dataPrazoDevolucao
 ) {
-
-    // O método 'calcularMulta' foi movido para o 'BibliotecaService',
-    // pois ele precisa da 'dataDevolucaoReal' (que não existe neste record)
-    // para fazer o cálculo no momento da devolução.
 
     @Override
     public String toString() {

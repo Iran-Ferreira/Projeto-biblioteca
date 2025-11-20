@@ -1,11 +1,6 @@
 package com.biblioteca.model;
 
 import java.util.UUID;
-
-/**
- * Classe base abstrata e SELADA para Usuários.
- * 'permits' restringe a herança apenas para Leitor e Administrador.
- */
 public abstract sealed class Usuario permits Leitor, Administrador {
 
     private final UUID id;

@@ -5,17 +5,12 @@ import com.biblioteca.model.*;
 import com.biblioteca.service.BibliotecaService;
 
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class Main {
 
-    // Criamos o service e o scanner como estáticos
-    // para que todos os métodos da Main possam usá-los.
     private static final BibliotecaService biblioteca = new BibliotecaService();
     private static final Scanner scanner = new Scanner(System.in);
 

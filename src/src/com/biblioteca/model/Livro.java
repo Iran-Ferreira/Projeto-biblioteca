@@ -17,7 +17,6 @@ public class Livro {
         this.disponivel = true; // Todo livro começa disponível
     }
 
-    // Métodos de controle de estado (conforme solicitado no diagrama)
     public void emprestar() {
         if (!this.disponivel) {
             throw new LivroException("O livro '" + titulo + "' não está disponível.");

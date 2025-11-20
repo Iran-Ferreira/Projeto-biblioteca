@@ -122,7 +122,6 @@ public class BibliotecaService {
         } else {
             System.out.println("Devolução dentro do prazo. Sem multas.");
         }
-
         return multa;
     }
 
@@ -136,7 +135,6 @@ public class BibliotecaService {
     }
 
     // --- Métodos de Consulta ---
-
     public Optional<Livro> buscarLivroPorId(UUID id) {
         return catalogoLivros.stream()
                 .filter(l -> l.getId().equals(id))
@@ -155,7 +153,7 @@ public class BibliotecaService {
     public void exibirHistoricoLeitor(UUID leitorId) {
         System.out.println("\n--- HISTÓRICO DO LEITOR " + leitorId.toString().substring(0, 8) + " ---");
 
-        // Polimorfismo: Filtramos a lista de 'Usuario' para achar o 'Leitor'
+        //Filtramos a lista de 'Usuario' para achar o 'Leitor'
         Leitor leitor = (Leitor) usuarios.stream()
                 .filter(u -> u.getId().equals(leitorId) && u instanceof Leitor)
                 .findFirst()
@@ -192,10 +190,7 @@ public class BibliotecaService {
         }
     }
 
-    // ... (todo o código anterior do BibliotecaService)
-
 // --- MÉTODOS DE CONSULTA (Getters para o Menu) ---
-
     /**
      * Retorna uma visão NÃO-MODIFICÁVEL do catálogo.
      * Usado pelo menu para exibir opções ao usuário.
@@ -206,14 +201,14 @@ public class BibliotecaService {
     }
 
     /**
-     * Retorna uma visão NÃO-MODIFICÁVEL dos usuários.
+     * Retorna uma visão dos usuários.
      */
     public List<Usuario> getUsuarios() {
         return java.util.Collections.unmodifiableList(usuarios);
     }
 
     /**
-     * Retorna uma visão NÃO-MODIFICÁVEL dos empréstimos ativos.
+     * Retorna uma visão dos empréstimos ativos.
      */
     public List<Emprestimo> getEmprestimosAtivos() {
         return java.util.Collections.unmodifiableList(emprestimosAtivos);
